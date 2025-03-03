@@ -1,0 +1,13 @@
+{:key :uncopyright :path "/uncopyright" :title "Uncopyright" :content
+ [[:h1 "Uncopyright"]
+  [:p "By words of Leo Babauta of ZenHabits.net:"]
+  [:blockquote
+   [:p "This entire blog, and all my ebooks, are uncopyrighted."]
+   [:p "That means I’ve put them in the public domain, and released my copyright on all these works."]
+   [:p "There is no need to email me for permission — use my content however you want! Email it, share it, reprint it with or without credit. Change it around, put in a bunch of swear words and attribute them to me. It’s OK."]
+   [:p "Attribution is appreciated but not required."]]
+  [:p "Read the full " [:a {:href :zenhabits-uncopyright :target "_blank" :rel "noopener"} "uncopyright manifesto"] "."]
+
+  [:h2 "Site source code is OSS"]
+  [:p "Apart from the content, this site source-code is available on " [:fa-icon {:name "brands/github" :style "top: -4px"}] " GitHub:" [:a {:href :gh-project-link :target "_blank" :rel "noopener"} "@jakub-stastny/oso"] "."]
+  [:p "That means you can use it to launch a similar website, tweaking it for your purpose."]]}

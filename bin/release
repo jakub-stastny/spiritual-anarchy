@@ -1,0 +1,41 @@
+#!/usr/bin/env zsh
+
+if ! git diff-index --quiet HEAD --; then
+  echo "[ERROR] Working directory dirty."
+  exit 1
+fi
+
+echo "\n~ Building HTML"
+./bin/build-html --release
+
+echo "\n~ Building CSS"
+./bin/build-css --release
+
+echo "\n~ Compiling CLJS"
+./bin/build-cljs --release
+
+echo "\n~ Building the router"
+./bin/build-router
+
+echo "\n~ Copying over assets"
+rm -rf pages/assets
+cp -R src/assets pages/
+
+package_json_contents=$(<package.json)
+
+cp -R pages pages-copy
+cp -R netlify netlify-copy
+
+echo "\n~ Switching to rel"
+git checkout rel
+
+rm -rf pages netlify
+mv pages-copy pages
+mv netlify-copy netlify
+
+echo "$package_json_contents" > package.json
+
+git add pages netlify package.json
+git commit -m "Automated commit from $(date '+%d/%m/%Y at %H:%M')"
+
+git checkout master

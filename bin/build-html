@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+
+exec bb -cp src/build:src --main build-html "$@"

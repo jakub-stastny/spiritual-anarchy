@@ -1,0 +1,84 @@
+a, a:visited { text-decoration: none; }
+/* a:visited { color: var(--link-colour); } */
+a:visited { color: blue; }
+a:hover { color: seagreen; }
+
+li {
+  white-space: nowrap;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  :host {
+    background: midnightblue;
+    color: red;
+  }
+
+  :host ul {
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0.6em 0;
+    display: flex;
+  }
+
+  :host ul li {
+    margin-right: 10px; /* Adjust spacing as needed. */
+  }
+
+  :host ul li:not(:last-child)::after {
+    content: "|";
+    color: black;
+    margin-left: 10px; /* Adjust spacing as needed. */
+  }
+
+  /* Hide all the services on mobile (and only show the services main page link). */
+  ul.large-screen {
+    display: none;
+  }
+}
+
+/* Large screen */
+@media (min-width: 768px) {
+  :host {
+    background: var(--secondary-colour);
+    color: grey;
+  }
+
+  :host ul {
+    list-style: none;
+  }
+
+  #services {
+    display: block;
+  }
+
+  #services, ul li {
+    padding-bottom: 1ex;
+    white-space: nowrap;
+  }
+
+  nav > ul > li > a, nav > ul > li > span {
+    font-weight: bold;
+  }
+
+  nav {
+    margin: 8ex auto;
+    /* border-right: 1px solid; */
+  }
+
+  :host {
+    border-right: 1px;
+  }
+
+  :host ul ul {
+    padding-left: 1em;
+  }
+
+  a.mobile {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    color: #6666cc;
+  }
+}

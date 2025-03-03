@@ -1,0 +1,14 @@
+:host {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: bottom; /* The other option is to define
+                             position: relative and then use top: -5px
+                             to align, but one has to do so manually. */
+  /* padding-right: 1em; */
+}
+
+svg {
+  /* width: 100%; */
+  height: 100%;
+}

@@ -1,0 +1,98 @@
+* About
+
+See the main README for general information. This README is here to document how to write web components with Cherry.
+
+/NOTE: I'm a software developer by trade, but I double in spirituality, energy healing and astrology. If you're a programmer like me, you are likely not to believe in this sort of stuff and that's fine. However I assure you, it's not a scam. It came to me without me asking for it and I take it as my privilidge and responsibility to use these insights for those who need them. Please keep an open mind./
+
+The site is deployed on [[https://jakubstastny.guru?utm_source=gh][jakubstastny.guru]].
+
+* Documentation
+** Setup
+First install latest Cherry from NPM:
+#+begin_src sh
+  npm install cherry-cljs@latest
+#+end_src
+
+Now let's copy relevant Cherry libs into the directory that you will point your web server to:
+
+#+begin_src sh
+  mkdir -p target/vendor/cherry-cljs
+  cp node_modules/cherry-cljs/lib/cljs.core.js target/vendor/cherry-cljs
+  cp node_modules/cherry-cljs/lib/clojure.set.js target/vendor/cherry-cljs
+  cp node_modules/cherry-cljs/lib/clojure.string.js target/vendor/cherry-cljs
+  cp node_modules/cherry-cljs/lib/clojure.walk.js target/vendor/cherry-cljs
+#+end_src
+
+Ref [[https://github.com/jakub-stastny/jakubstastny/blob/master/bin/build-cljs][bin/build-cljs]].
+
+** Import map
+To make sure Cherry can be found when used for instance in:
+
+#+begin_src clojure
+  (ns my-ns (:require [cherry.core :refer [defclass]]))
+#+end_src
+
+We need to make sure the import map points the browser to the right path:
+
+#+begin_src html
+  <script type="importmap">
+    {"imports":
+      {"cherry-cljs/cljs.core.js":"/vendor/cherry-cljs/cljs.core.js"}}
+  </script>
+#+end_src
+
+** Writing web components
+https://github.com/squint-cljs/squint/blob/main/doc/defclass.md
+#+begin_src clojure
+  (defclass MyNav
+    (extends HTMLElement)
+
+    (constructor [this]
+                 (super)
+                 (.attachShadow this #js {"mode" "open"}))
+
+    Object
+    (connectedCallback [this]
+                       (render (.-shadowRoot this))))
+
+  (js/customElements.define "my-nav" MyNav)
+#+end_src
+
+
+*** TODO Change to hiccup syntax
+- https://github.com/squint-cljs/cherry/issues/138
+
+**** TODO Change ~render~ to return string only
+
+***** TODO Make copying SVG dynamic
+Call ~render~ function of all the components and find <fa-icon name> in it.
+
+*** TODO constructor and connectedCallback
+
+#+begin_src clojure
+  (.attachShadow this #js {"mode" "open"})
+#+end_src
+
+*** TODO Functions vs instance methods
+Since web components are written as a class, it seemed logical to me to put each helper method onto the class as a method.
+However the syntax is awkward and ~this~ has to be passed into it every single time, not to mention it indents way too much.
+For that reason I started using thing web component class definitions and practically everything I do outside in /private/ helper methods.
+
+See my-email.cljs
+
+*** TODO Slots
+See my-email.cljs
+
+*** TODO Async
+See fa-icon.cljs
+
+#+begin_src clojure
+   Object
+  (^:async connectedCallback [this] {}
+#+end_src
+
+* Links
+- [[https://github.com/squint-cljs/cherry][Cherry README]]
+- [[https://github.com/shvets-sergey/web-components-squint/][@shvets-sergey/web-components-squint]]
+- [[https://github.com/squint-cljs/cherry/issues/97][Cherry issue #97]] Support EcmaScript classes
+- [[https://www.dropbox.com/scl/fi/olxy06pbcx686foxj19ad/dcd2022-cljs-reimagined.pdf?rlkey=cero5n3xd41hwxdoaye2qmy5d&e=2&dl=0][ClojureScript reimaged slides]] Dutch Clojure Days 2022

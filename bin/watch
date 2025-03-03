@@ -1,0 +1,44 @@
+#!/usr/bin/env bb
+
+(require '[babashka.process :as process]
+         '[babashka.fs :as fs]
+         '[babashka.pods :as pods])
+
+(pods/load-pod 'org.babashka/fswatcher "0.0.5")
+(require '[pod.babashka.fswatcher :as fw])
+
+(defn matches-ext? [path & exts]
+  (some #(.endsWith path %) exts))
+
+(defn make-handler [command]
+  (fn [path]
+    (try
+      ;; TODO: Don't print the whole error, rather just time stamp and OK/Err.
+      (process/shell (str command " " path))
+      (catch Exception (prn error)))))
+
+(def cljs-handler (make-handler "./bin/build-cljs"))
+(def html-handler (make-handler "./bin/build-html"))
+(def css-handler (make-handler "./bin/build-css"))
+
+(defn handler [{:keys [path]}]
+  ;; Filter out Emacs files.
+  (when (not (str/includes? path "#"))
+    (cond
+      (.endsWith path ".css") (css-handler path)
+      (.endsWith path ".edn") (html-handler path)
+      (.endsWith path ".cljs") (cljs-handler path))))
+
+;; Compile everything at start.
+(process/shell "./bin/build-html")
+(process/shell "./bin/build-css")
+(process/shell "./bin/build-cljs")
+(process/shell "./bin/build-router")
+(process/shell "rm" "-rf" "pages/assets")
+(process/shell "cp" "-R" "src/assets" "pages/")
+
+(fw/watch "src" handler {:recursive true})
+
+println "~ Watching for changes."
+
+@(promise)

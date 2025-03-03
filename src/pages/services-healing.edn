@@ -1,0 +1,28 @@
+;; TODO: Find the real picture, it's not in Photos/2021/Guate.
+;; This is from a screen capture of the flier.
+{:key :services-healing :path "/services/remote-energy-healing" :title "Remote energy healing" :content
+ [[:h1 "Remote energy healing"]
+  [:service-info {:style "text-align: center"}]
+
+  [:div.columns {:style "display: flex; align-items: center;"}
+   [:div
+    [:img.framed {:src "/assets/healing.jpg" :height 400}]
+    [:p {:style "font-style: italic; color: black;"} "Giving healing in Antigua Guatemala, 2021."]]
+
+   [:div
+    [:p "From the very first time I felt the flow of energy and applied it to help another, the results were nothing short of remarkable. Witnessing the transformation—a face looking years younger after my first-ever session—left me both amazed and deeply committed to exploring this path further."]
+    [:p "Over the years, I have dedicated myself to mastering the art of healing. This journey has led me to study and practice a wide range of disciplines, including energy manipulation, advanced breathing techniques, meditation, and the use of crystals. My exploration of traditional healing methods in Mexico and Guatemala—nations rich in native healing traditions—has further deepened my understanding and practice."]
+    [:p "I have spent countless hours working one-on-one with individuals, guiding them toward physical, emotional, and spiritual wellness. Now, with this remote offering, you can benefit from my years of experience and deep connection to healing energy, no matter where you are in the world."]
+    [:p "Experience the profound effects of remote energy healing and let me assist you on your journey to health and rejuvenation, wherever you may be."]
+
+    [:div {:style "margin-top: 50px; text-align: center"}
+     [:my-email {:subject "Energy healing session"}
+      [:a.button.green "Book a session"]]]]]
+
+  [:h2 "How does it help me with Self-realisation?"]
+  [:p "As I already said on the " [:a {:href :self-realisation} "Self-realisation"] " page, my deepest desire is to assist and guide those who seek to awaken. Energy healing will remove your energy blocks and elevate your vibration considerably, so you will be able to see your life with a better clarity."]
+  [:p "That will last for about a day or two, depending on your spiritual hygiene, but it already helped by showing you how things could be and allow you to replicate that state later through your own efforts. If you take more than 1 session, there will be more lasting healing effects. I recommend people to take 3 sessions and then evaluate the results."]
+
+  [:div {:style "margin: 50px 0 70px"}
+   [:my-email {:subject "Energy healing session"}
+    [:a.button.blue "Book a session"]]]]}

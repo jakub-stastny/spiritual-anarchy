@@ -1,0 +1,32 @@
+{:key :index :path "/" :title "Jakub Šťastný spiritual guide" :heading "Main page" :content
+ [[:section
+   [:h2 "Hi! Nice to meet you."]
+   [:div#intro
+    [:div
+     ;; [:img.avatar {:src "https://gravatar.com/avatar/96b3f2b784832a6c0a957a34e63bf0ea?s=200" :width 200 :height 200}]
+     [:img.avatar {:src "/assets/jakub.jpg" :width 200 :height 200}]]
+    [:div
+     [:p "I’m Jakub Šťastný, a spiritual guide and energy healer dedicated to helping others find balance and purpose in their lives."]
+     [:p
+      "After a lot of suffering, my sensibilities opened and I was finally able to see through the veil of reality. "
+      "I developed acute psychic sensibilities as well as an understanding of how to guide people through the awakening process."]
+     [:p [:a {:href :about} "Read my story »"]]]]]
+
+  [:section
+   [:h2 "Self-realisation: the answer to your prayers"]
+   [:p
+    "Life of most people is just so hard. The suffering is so real, the crises are so cripling and the worries seldom stop. "
+    "It doesn't have to be like that. The ultimate answer to all life's challenges is Self-realisation. "
+    "After seeing through the veil, nothing is same ever again. "
+    "Obviously the challenges never go away, but after Self realisation there's a deep peace with anything that arises."]
+     [:p [:a {:href :self-realisation} "Learn more »"]]]
+
+  [:section#newsletter [:my-newsletter]]
+
+  [:section
+   [:h2 "How can I help you?"]
+   [:div
+    [:p "Whether you’re seeking clarity through talk therapy, insight through astrology, or healing through energy work, I’m here to support you on your spiritual journey."]
+    [:div.buttons
+     [:a.button.blue {:href :services} "Explore services"]
+     [:a.button.green {:href :contact} "Get in touch"]]]]]}

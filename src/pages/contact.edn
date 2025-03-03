@@ -1,0 +1,28 @@
+{:key :contact :path "/contact" :title "Contact Jakub" :heading "Contact me" :content
+ [[:h1 "Contact me"]
+
+  [:section
+   [:p "I’m here to listen and support you on your journey. Whether you have a question, need advice, or just want to talk, feel free to reach out."]
+   [:p "I’ve always been sensitive to the energies around me, and over time, I discovered my psychic abilities. This led me to dedicate myself to something greater—the pursuit of helping others on their spiritual journeys."]
+   [:p "I offer all my services as well as general advice on a donation basis. Donations are entirely at your discretion, and I understand that not everyone is in a position to contribute. However, as my family and I live with limited means, any contribution, no matter how small, is deeply appreciated and helps us continue providing these services."]
+
+   [:p.tagline "Looking forward to connecting with you!"]
+
+   [:div#contact-buttons.buttons
+    [:div
+     [:a.button.green {:href :donate}
+      ;; [:fa-icon {:name "brands/cc-paypal" :colour "black"}]
+      [:fa-icon {:name "money-bill-1-wave" :colour "black"}]
+      "Donate"]]
+
+    [:div
+     [:my-email
+      [:a.button.blue
+       [:fa-icon {:name "envelope" :colour "white"}] "Email me"]]]]]
+
+  [:section#newsletter [:my-newsletter]]
+
+  [:section#uncopyright
+   [:h2 "Uncopyright"]
+   [:p.tagline "All the content on this site is free, even the source code that runs it!"]
+   [:p "If you want to use any content from this website, you are welcome to do so. I release copyrights on all of the content as well as on the source code of this website. Read " [:a {:href :uncopyright} "uncopyright"] " for more info."]]]}

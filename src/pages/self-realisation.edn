@@ -1,0 +1,36 @@
+;; Self-realisation might be called the initial point, the end point (enlightenment)
+;; and also the whole process of going from Satori to enlightenment.
+
+{:key :self-realisation :path "/self-realisation" :title "Self-realisation" :content
+ [[:h1 "Self-realisation"]
+  [:p "Until we realise who we truly are, we are living in a dream. Even if we consider ourselves spiritual and don't believe to be our bodies, we still identify with our thoughts, emotions, name, personal preferences and our life story. Then when someone speaks against our opinions, we feel hurt, because of this identification. Self-realisation is waking up from this dream."]
+  [:p "It means the witness-consciousness (Self) within us awakens and we realise it to be our true nature. I really like this description from the Mundaka Upanishad:"]
+  [:p {:style "font-style: italic"} "Two birds, who are eternal companions, sit on the same tree. One bird is busy eating the sweet and bitter fruits of the tree, while the other bird remains still, watching without partaking in the fruits."]
+  [:p "The eating bird is fully immersed in the merry-go-round of worldly life. Initially we all believe to be this eating and shitting bird, while really we are the observing bird (Self). When we realise that, we awaken."]
+  [:p "Note the word " [:em "realise"] ". It refers to a lived experience, not an intellectual pursuit. You can't just read about it and bingo, I realised the Self. That's just not how it works. Actually not even “experience” is the right word for it, the best word for it is realisation."]
+
+  [:div#term
+   [:p "Self-realisation is also known as spiritual awakening, but given that spiritual awakening is a more vague term, I prefer to use the term Self-realisation, which specifically means to awaken to the witness-consciousness of the true Self and recognise mental and material phenomena as impermanent and in an ultimate sense, not real."]
+   [:p "Spiritual awakening is oftentimes used to describe various kinds of awakening, namely psychic awakening. Self-realisation is nothing that adds into what you can do, such as awakening healing abilities like psychic awakening might do, rather it's " [:em "tearing the matrix"] ", understanding the reality. It is beyond words and cannot ever be explained, but many spiritual traditions provided sign posts to show the path to get there."]]
+
+  [:h2 "Why should I be even interested in that?"]
+  [:p "If you embark on the path of consciousness, your life will never be the same. Admittedly, it'll get worse before it gets better. Healing isn't easy. No good story was ever easy. There's a hero journey and you are the hero being called to action. Save yourself and in so doing, you'll save the world."]
+  [:p "I struggled with lifetime of heavy depression, unability to hold a job and addiction, but when I finally healed enough to see through the veil, all of it disolved and was gradually replaced by deep inner peace and stillness that never goes away, no matter what may be happening in my life. And with time the peace started to change to bliss."]
+  ;; [:p "I keep experimenting everything in life, yet just like the lotus flower growing in a dirt, I'm untouched by it."]
+
+  [:h2 "How do I awaken?"]
+  [:p "There are many ways. Meditation is the most obvious one. I'm glad that meditation has become so widespread, although personally I think breathwork is more suitable in the beginnings and maybe even generally. Simple Nadi Shodhana for 20 minutes a day will take you a long way."]
+  [:p "Anyway any and every spiritual practice is designed to awaken you. Taoism, Advaita Vedanta and Zen Buddhism are some of the traditions I like the most. The yogic path is also great, although yoga in the West has little to do with awakening these days. Modern spiritual teachers like Eckhart Tolle or Michael A Singer, amongst made a great effort to make awakening within reach of a modern person. I especially recommend Singer's amazing book The Untethered Soul."]
+
+  [:h2 "How can I help you?"]
+  [:p "So then, if there are such a great traditions and modern teachers, why should you talk to me? I'm not a lama or Eckhart Tolle."]
+  [:p "I had a guide on the journey, Patricia. Read my " [:a {:href :about} "about"] " page if you want to know that story. You do need someone to guide you. And also, the deepest trauma you cannot see and is necessary that another person points them out to you and then witnesses the processes of you healing. It's how it's been since the dawn of time."]
+  [:p "Many have high pride and think they don't need a teacher. I have seen countless people, especially amongst the Western Buddhists to know the doctrine from A to Z and be able to successfully debate others, yet they haven't awakened yet, which is the very reason Buddhism exists in the first place. Their pride is holding them back."]
+  [:p "Wide-spread Self-realisation is what I want for humanity and it is my reason for starting this endeavour. I'd be happy to help you on your healing and awakening path if it's what you want for yourself\u00A0🙏🏼"]
+
+  [:div.buttons
+   [:a.button.blue {:href :services} "Explore services"]
+   [:a.button.green {:href :contact} "Get in touch"]]
+
+  [:div {:style "margin-top: 30px"}
+   [:p {:style "font-style: italic; text-align: center"} "Feel free to reach out and just chat informally, no strings attached. I'm always happy to help out. I won't charge you as all my services are donation-based anyway."]]]}
