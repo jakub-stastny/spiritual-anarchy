@@ -63,6 +63,7 @@
              [:script {:type "module" :src "/js/my-header.mjs"}]
              [:script {:type "module" :src "/js/my-nav.mjs"}]
              [:script {:type "module" :src "/js/my-footer.mjs"}]
+             [:script {:type "module" :src "/js/my-feed.mjs"}]
              [:script {:type "module" :src "/js/my-newsletter.mjs"}]
              [:script {:type "module" :src "/js/service-info.mjs"}]
 

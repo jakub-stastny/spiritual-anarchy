@@ -1,12 +1,12 @@
 {
   "contact" : {
     "path" : "/contact",
-    "title" : "Contact Jakub",
+    "title" : "Contact",
     "heading" : "Contact me"
   },
   "index" : {
     "path" : "/",
-    "title" : "Jakub Šťastný spiritual guide",
+    "title" : "Spiritual anarchy",
     "heading" : "Main page"
   },
   "donate" : {
