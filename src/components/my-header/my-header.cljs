@@ -14,7 +14,7 @@
          [:link {:rel "stylesheet" :href "/css/my-header.css"}]
          [:header
           [:div {:class "wrapper" :style "opacity: 0;"}]
-          [:h1 (no-self-referring-link "Jakub Šťastný" "/")]
-          [:h2 {:class "tagline"} "Spiritual guide & energy healer"]]])
+          [:h1 (no-self-referring-link "Spiritual anarchy" "/")]
+          [:h2 {:class "tagline"} "Tagline"]]])
 
 (component MyHeader "my-header" render)

@@ -2,7 +2,7 @@ import * as cherry_core from 'cherry-cljs/cljs.core.js';
 import * as squint_html from 'squint-cljs/src/squint/html.js';
 import { no_self_referring_link } from 'helpers';
 var render = (function (_) {
-return squint_html.tag`<link rel="stylesheet" href="/css/my-header.css"><header><div class="wrapper" style="opacity: 0;"></div><h1>${no_self_referring_link.call(null, "Jakub Šťastný", "/")}</h1><h2 class="tagline">Spiritual guide & energy healer</h2></header>`;
+return squint_html.tag`<link rel="stylesheet" href="/css/my-header.css"><header><div class="wrapper" style="opacity: 0;"></div><h1>${no_self_referring_link.call(null, "Spiritual anarchy", "/")}</h1><h2 class="tagline">Tagline</h2></header>`;
 });
 class MyHeader extends HTMLElement {
   constructor() {

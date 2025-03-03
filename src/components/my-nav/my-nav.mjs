@@ -36,12 +36,8 @@ var render = (async function () {
 const router1 = (await fetch_router.call(null));
 const main2 = item_link.call(null, get_BANG_.call(null, router1, cherry_core.keyword("index")));
 const about3 = item_link.call(null, get_BANG_.call(null, router1, cherry_core.keyword("about")));
-const spiritual_guidance4 = item_link.call(null, get_BANG_.call(null, router1, cherry_core.keyword("services-guidance")));
-const astro_reading5 = item_link.call(null, get_BANG_.call(null, router1, cherry_core.keyword("services-reading")));
-const remote_healing6 = item_link.call(null, get_BANG_.call(null, router1, cherry_core.keyword("services-healing")));
-const services7 = cherry_core.vector(squint_html.tag`<span id="services">${item_link.call(null, get_BANG_.call(null, router1, cherry_core.keyword("services")), cherry_core.array_map(cherry_core.keyword("class"), "mobile"))}</span>`, squint_html.tag`<ul class="large-screen"><li>${spiritual_guidance4}</li><li>${remote_healing6}</li><li>${astro_reading5}</li></ul>`);
-const contact8 = item_link.call(null, get_BANG_.call(null, router1, cherry_core.keyword("contact")));
-return squint_html.tag`<link rel="stylesheet" href="/css/my-nav.css"><nav><ul><li>${main2}</li><li>${about3}</li><li>${services7}</li><li>${contact8}</li></ul></nav>`;
+const contact4 = item_link.call(null, get_BANG_.call(null, router1, cherry_core.keyword("contact")));
+return squint_html.tag`<link rel="stylesheet" href="/css/my-nav.css"><nav><ul><li>${main2}</li><li>${about3}</li><li>${contact4}</li></ul></nav>`;
 });
 class MyNav extends HTMLElement {
   constructor() {

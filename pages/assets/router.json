@@ -1,46 +1,25 @@
 {
-  "index" : {
-    "path" : "/",
-    "title" : "Jakub Šťastný spiritual guide",
-    "heading" : "Main page"
-  },
-  "services-healing" : {
-    "path" : "/services/remote-energy-healing",
-    "title" : "Remote energy healing"
-  },
-  "uncopyright" : {
-    "path" : "/uncopyright",
-    "title" : "Uncopyright"
-  },
-  "self-realisation" : {
-    "path" : "/self-realisation",
-    "title" : "Self-realisation"
-  },
-  "donate" : {
-    "path" : "/donate",
-    "title" : "Donate"
-  },
   "contact" : {
     "path" : "/contact",
     "title" : "Contact Jakub",
     "heading" : "Contact me"
   },
-  "services-reading" : {
-    "path" : "/services/intuitive-astrology-reading",
-    "title" : "Intuitive astrology reading"
+  "index" : {
+    "path" : "/",
+    "title" : "Jakub Šťastný spiritual guide",
+    "heading" : "Main page"
   },
-  "services-guidance" : {
-    "path" : "/services/spiritual-guidance",
-    "title" : "Spiritual guidance"
+  "donate" : {
+    "path" : "/donate",
+    "title" : "Donate"
   },
   "about" : {
     "path" : "/about",
     "title" : "About Jakub",
     "heading" : "About me"
   },
-  "services" : {
-    "path" : "/mexico",
-    "title" : "....",
-    "heading" : "Mexico"
+  "uncopyright" : {
+    "path" : "/uncopyright",
+    "title" : "Uncopyright"
   }
 }

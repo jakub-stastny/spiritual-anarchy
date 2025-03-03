@@ -27,19 +27,19 @@
   (let [router (js/await (fetch-router))
         main (item-link (get! router :index))
         about (item-link (get! router :about))
-        spiritual-guidance (item-link (get! router :services-guidance))
-        astro-reading (item-link (get! router :services-reading))
-        remote-healing (item-link (get! router :services-healing))
-        services [#html [:span {:id "services"} (item-link (get! router :services) {:class "mobile"})]
-                  #html [:ul {:class "large-screen"}
-                         [:li spiritual-guidance]
-                         [:li remote-healing]
-                         [:li astro-reading]]]
+        ;; spiritual-guidance (item-link (get! router :services-guidance))
+        ;; astro-reading (item-link (get! router :services-reading))
+        ;; remote-healing (item-link (get! router :services-healing))
+        ;; services [#html [:span {:id "services"} (item-link (get! router :services) {:class "mobile"})]
+        ;;           #html [:ul {:class "large-screen"}
+        ;;                  [:li spiritual-guidance]
+        ;;                  [:li remote-healing]
+        ;;                  [:li astro-reading]]]
         contact (item-link (get! router :contact))]
     #html [:<>
            [:link {:rel "stylesheet" :href "/css/my-nav.css"}]
            [:nav
-            [:ul [:li main] [:li about] [:li services] [:li contact]]]]))
+            [:ul [:li main] [:li about] [:li contact]]]]))
 
 (defclass MyNav
   (extends HTMLElement)

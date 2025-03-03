@@ -1,12 +1,7 @@
 User-agent: *
 Disallow: /
-Allow: /$
-Allow: /services/remote-energy-healing$
-Allow: /uncopyright$
-Allow: /self-realisation$
-Allow: /donate$
 Allow: /contact$
-Allow: /services/intuitive-astrology-reading$
-Allow: /services/spiritual-guidance$
+Allow: /$
+Allow: /donate$
 Allow: /about$
-Allow: /mexico$
+Allow: /uncopyright$
