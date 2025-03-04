@@ -7,17 +7,20 @@
         data (js/await (.json response))]
     (js->clj data :keywordize-keys true)))
 
+(defn render-tag [tag]
+  #html [:li [:a {:href (str "/tags/" tag)} tag]])
+
 (defn render-item [{:keys [title link tags notes]}]
   #html [:article
          [:h3 [:a {:href link :target "_blank" :rel "noopener"} title]]
-         [:p {:class "tags"} (.join (clj->js tags) ", ")] ; TODO: Make it ul/li probably? Show # in front of each and a link.
+         [:ul {:class "tags"} (map render-tag tags)]
          [:p notes]])
 
 (defn ^:async render []
   (let [feed (js/await (fetch-feed))]
     #html [:<>
            [:link {:rel "stylesheet" :href "/css/my-feed.css"}]
-           [:section (map #(render-item %) feed)]]))
+           [:section (map render-item feed)]]))
 
 (defclass MyFeed
   (extends HTMLElement)
