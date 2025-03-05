@@ -1,1 +1,4 @@
 * About
+** TODO Deploy to Netlify
+*** TODO Set up DNS
+*** TODO Update my Reddit profile to point to it instead of my personal site

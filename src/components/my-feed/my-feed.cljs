@@ -1,4 +1,9 @@
-;; Upon adding an item to the feed, run a generator and regenerate tags.
+;; How to handle dynamic URLs such as /tags/kundalini etc?
+;; Currently we only have 1 template (core.clj). We might need :template option to override.
+;; Having bunch of boilerplate files in pages such as pages/tags/kundalini.edn would be a good thing
+;; (as long as there's little code), because it's precisely where we can stick any extra info and descriptions.
+;;
+;; We can generate these files on the go from /tags.json and /authors.json.
 (ns my-feed
   (:require [cherry.core :refer [defclass]]
             [helpers :refer [time-ago no-self-referring-link get!]]))
