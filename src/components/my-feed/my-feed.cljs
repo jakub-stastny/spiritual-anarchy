@@ -1,20 +1,25 @@
+;; Upon adding an item to the feed, run a generator and regenerate tags.
 (ns my-feed
   (:require [cherry.core :refer [defclass]]
-            [helpers :refer [no-self-referring-link get!]]))
+            [helpers :refer [time-ago no-self-referring-link get!]]))
+
+(def main-feed-url "https://raw.githack.com/jakub-stastny/data.spiritual-anarchy/generated-data/feed/posts.json")
 
 (defn- ^:async fetch-feed []
-  (let [response (js/await (js/fetch "/assets/feed.json")) ;; TODO: Change to a raw githack URL to another repo.
+  (let [response (js/await (js/fetch main-feed-url))
         data (js/await (.json response))]
     (js->clj data :keywordize-keys true)))
 
 (defn render-tag [tag]
   #html [:li [:a {:href (str "/tags/" tag)} tag]])
 
-(defn render-item [{:keys [title link tags notes]}]
+(defn render-item [{:keys [title date-added link tags notes]}]
   #html [:article
-         [:h3 [:a {:href link :target "_blank" :rel "noopener"} title]]
+         [:div {:style "display: flex"}
+          [:h3 [:a {:href link :target "_blank" :rel "noopener"} title]]
+          [:p {:class "date"} (time-ago (new Date date-added))]]
          [:ul {:class "tags"} (map render-tag tags)]
-         [:p notes]])
+         (map (fn [note] #html [:p note]) notes)])
 
 (defn ^:async render []
   (let [feed (js/await (fetch-feed))]

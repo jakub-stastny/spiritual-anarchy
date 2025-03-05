@@ -59,7 +59,7 @@
          [:link {:rel "stylesheet" :href "/css/my-newsletter.css"}]
 
          [:div {:id "newsletter"}
-          [:h2 "Subscribe to my newsletter!"]
+          [:h2 "Subscribe to our newsletter!"]
           [:p {:id "tagline"} "Don't miss out on the latest tips. Be in the know."]
 
           [:fa-icon {:name "spinner" :style "display: none"}]

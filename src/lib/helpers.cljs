@@ -75,3 +75,22 @@
     (if (= (.. document -body -childElementCount) 1)
       (.. document -body -firstChild)
       (throw (new Error (str "Not exactly 1 child element in:" html-string))))))
+
+(defn time-ago [date]
+  (let [now (js/Date.)
+        diff-ms (- (.getTime now) (.getTime date))
+        seconds (Math/floor (/ diff-ms 1000))
+        minutes (Math/floor (/ seconds 60))
+        hours (Math/floor (/ minutes 60))
+        days (Math/floor (/ hours 24))
+        weeks (Math/floor (/ days 7))
+        months (Math/floor (/ days 30.44))
+        years (Math/floor (/ days 365.25))]
+    (cond
+      (< seconds 60) "just now"
+      (< minutes 60) (str minutes " " (if (= minutes 1) "minute" "minutes") " ago")
+      (< hours 24) (str hours " " (if (= hours 1) "hour" "hours") " ago")
+      (< days 7) (str days " " (if (= days 1) "day" "days") " ago")
+      (< weeks 5) (str weeks " " (if (= weeks 1) "week" "weeks") " ago")
+      (< months 12) (str months " " (if (= months 1) "month" "months") " ago")
+      :else (str years " " (if (= years 1) "year" "years") " ago"))))

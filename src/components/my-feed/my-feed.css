@@ -1,5 +1,7 @@
 a { text-decoration: none; }
 
+.date { color: #666666; }
+
 .tags {
   list-style-type: none;
   padding: 0;
