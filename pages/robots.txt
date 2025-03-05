@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /
+Allow: /contact$
+Allow: /$
+Allow: /donate$
+Allow: /about$
+Allow: /uncopyright$

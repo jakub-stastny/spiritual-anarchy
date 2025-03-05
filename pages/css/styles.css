@@ -1,0 +1,111 @@
+/* CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Variables */
+:root {
+  --primary-colour: #f3c623;
+  --secondary-colour: #ffffe6;
+  --link-colour: blue;
+  --reddit-colour: #EB5528;
+  --youtube-colour: #EA3323;
+  --envelope-colour: steelblue;
+}
+
+/* Styling */
+html {
+  font-family: sans-serif;
+}
+
+h1 { color: firebrick; }
+p { color: darkslateblue; }
+
+h1, h2 {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+h1 { padding: 2.5ex 0 1ex; }
+h2 { padding: 3ex 0 1.5ex; }
+
+section { margin-bottom: 4ex; }
+
+.avatar {
+  margin: 12px;
+  border-radius: 17px;
+}
+
+main {
+  padding: 0px 50px 50px 50px;
+  background: var(--secondary-colour);
+  font-family: serif;
+}
+
+/* Large screen */
+@media (min-width: 768px) {
+  main {
+    padding-right: 200px;
+  }
+}
+
+a { text-decoration: none; }
+a:visited { color: var(--link-colour); }
+
+p { margin-bottom: 1.5ex; line-height: 1.4 }
+
+.price {
+  font-style: italic;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+a.button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+a.button, a.button:visited, a.button:hover, a.button:focus, a.button:active {
+  color: white;
+}
+
+a.button.green { background: #28a745; }
+a.button.blue { background: #007bff; }
+
+a.button.green:hover { background: #218838; }
+a.button.blue:hover { background: #0069d9; }
+
+/* Link in the process of being clicked. */
+a:active { color: red; }
+
+/* Selected by tab. */
+a:focus, a:focus { background: yellow; }
+
+nav a:not(.button):hover, main a:not(.button):hover {
+  /* text-decoration: underline dotted red; */
+  /* border-bottom: 2px dotted purple; */
+  color: mediumseagreen;
+}
+
+/* Set margin, not padding and height, not width. */
+fa-icon {
+  margin-right: 1.5ex;
+}
+
+.tagline {
+  text-align: center;
+  font-style: italic;
+}
