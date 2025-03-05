@@ -1,0 +1,16 @@
+#!/usr/bin/env bb
+
+(require '[babashka.http-client :as http])
+(require '[cheshire.core :as json])
+(require '[babashka.fs :as fs])
+(require '[clojure.set :as set])
+
+(def base-path "https://raw.githack.com/jakub-stastny/data.spiritual-anarchy/generated-data/feed")
+(defn endpoint [path] (str base-path path))
+
+(let [api-tags (set (json/parse-string (:body (http/get (endpoint "/tags.json")))))
+      existing-tags (set (map #(str/replace (fs/file-name %) #"\.edn" "") (fs/glob "src/pages/tags" "*.edn")))
+      missing-tags (set/difference api-tags existing-tags)
+      extraneous-tags (set/difference existing-tags api-tags)]
+  (prn :mt missing-tags)
+  (prn :et extraneous-tags))
