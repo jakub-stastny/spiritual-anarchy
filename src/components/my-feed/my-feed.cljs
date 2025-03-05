@@ -8,10 +8,11 @@
   (:require [cherry.core :refer [defclass]]
             [helpers :refer [time-ago no-self-referring-link get!]]))
 
-(def main-feed-url "https://raw.githack.com/jakub-stastny/data.spiritual-anarchy/generated-data/feed/posts.json")
+(defn get-url [path]
+  (str "https://raw.githack.com/jakub-stastny/data.spiritual-anarchy/generated-data/feed" path))
 
-(defn- ^:async fetch-feed []
-  (let [response (js/await (js/fetch main-feed-url))
+(defn- ^:async fetch-feed [path]
+  (let [response (js/await (js/fetch (get-url path)))
         data (js/await (.json response))]
     (js->clj data :keywordize-keys true)))
 
@@ -26,8 +27,8 @@
          [:ul {:class "tags"} (map render-tag tags)]
          (map (fn [note] #html [:p note]) notes)])
 
-(defn ^:async render []
-  (let [feed (js/await (fetch-feed))]
+(defn ^:async render [path]
+  (let [feed (js/await (fetch-feed path))]
     #html [:<>
            [:link {:rel "stylesheet" :href "/css/my-feed.css"}]
            [:section (map render-item feed)]]))
@@ -40,7 +41,8 @@
 
   Object
   (^:async connectedCallback [this]
-   (let [html (js/await (render))]
+   (let [path (.getAttribute this "path")
+         html (js/await (render path))]
      (set! (.-innerHTML (.-shadowRoot this)) html))))
 
 (js/customElements.define "my-feed" MyFeed)

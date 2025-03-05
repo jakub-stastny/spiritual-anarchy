@@ -1,3 +1,3 @@
 {:key :index :path "/" :title "Spiritual anarchy" :heading "Main page" :content
- [[:section#feed [:my-feed]]
+ [[:section#feed [:my-feed {:path "/posts.json"}]]
   [:section#newsletter [:my-newsletter]]]}
