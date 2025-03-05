@@ -9,7 +9,7 @@
 (def css-globs ["stylesheets/*.css" "components/**/*.css"])
 
 (def html-dir "pages")
-(def page-glob "pages/*.edn")
+(def page-globs ["pages/*.edn" "pages/**/*.edn"])
 
 (def svg-dirs (map #(str html-dir %) ["/svg/solid" "/svg/regular" "/svg/brands"]))
 (def svgs

@@ -41,9 +41,24 @@
 (defn run-filters [content]
   (walk/postwalk replace-href-keywords content))
 
+;; Define a multimethod based on the :template key
+(defmulti preprocess (fn [data] (get data :template :default)))
+
+(defmethod preprocess :default [data] data)
+
+(defmethod preprocess :tags [{:keys [tag intro]}]
+  (let [heading (str "Tag " tag)]
+    {:path (str "/tags/" tag)
+     :key (keyword (str "tag-" tag))
+     :title heading
+     :heading heading
+     :content [:<>
+               [:h1 heading]
+               intro]}))
+
 ;; There can be any data in the EDN, but typically there are:
 ;; :key, :path, :title, maybe :heading and :content.
-(defn template [{:keys [key title heading content css-path] :as edn-data} css-path]
+(defn template [{:keys [key title heading content] :as edn-data} css-path]
   (str
    (h/html (h/raw "<!DOCTYPE html>")
            [:html {:lang "en"}

@@ -4,20 +4,22 @@
             [babashka.fs :as fs]
             [config :as config]
             [utils :as utils]
-            [templates.core :refer [template routes]]))
+            [templates.core :refer [preprocess template routes]]))
 
 ;; The input is data from the EDN files in src/pages.
-(defn page [{:keys [path title heading content] :as edn-data}]
-  (let [path-fix-index (if (str/ends-with? path "/") (str path "index") path)
-        html-path (str config/html-dir path-fix-index ".html")
-        css-base
-        (if (str/includes? (subs path 1) "/")
-          (get (str/split path #"/") 1)
-          (subs path-fix-index 1))
-        css-path (str "/css/" css-base ".css")]
-    (println (str "~ Building " html-path "."))
-    (utils/ensure-parent-dir html-path)
-    (spit html-path (template edn-data css-path))))
+;; First page runs, only then template. We need to reverse the order.
+(defn page [edn-data]
+  (let [{:keys [path title heading content] :as updated-edn-data} (preprocess edn-data)]
+    (let [path-fix-index (if (str/ends-with? path "/") (str path "index") path)
+          html-path (str config/html-dir path-fix-index ".html")
+          css-base
+          (if (str/includes? (subs path 1) "/")
+            (get (str/split path #"/") 1)
+            (subs path-fix-index 1))
+          css-path (str "/css/" css-base ".css")]
+      (println (str "~ Building " html-path "."))
+      (utils/ensure-parent-dir html-path)
+      (spit html-path (template updated-edn-data css-path)))))
 
 ;; It'd be best to automate, however in my-footer there's dynamic code.
 (defn copy-svgs []
@@ -48,7 +50,7 @@
   (copy-svgs)
   (process-args
    (remove utils/emacs-file?
-           (map str (fs/glob "src" config/page-glob)))
+           (map str (flatten (map #(fs/glob "src" %) config/page-globs))))
    flags))
 
 (utils/generate-main-fn process-args process-default)
