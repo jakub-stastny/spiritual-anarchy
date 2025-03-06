@@ -1,9 +1,4 @@
 {
-  "contact" : {
-    "path" : "/contact",
-    "title" : "Contact spiritual anarchy",
-    "heading" : "Contact"
-  },
   "manifesto" : {
     "path" : "/manifesto",
     "title" : "Spiritual anarchy manifesto",
