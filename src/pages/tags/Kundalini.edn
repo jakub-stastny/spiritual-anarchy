@@ -1,2 +1,2 @@
-{:template :tags :tag "Kundalini" :intro
+{:template :tags :slug "Kundalini" :tag "Kundalini" :intro
  [:p "Kundalini is..."]}

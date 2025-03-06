@@ -8,9 +8,22 @@
 (def base-path "https://raw.githack.com/jakub-stastny/data.spiritual-anarchy/generated-data/feed")
 (defn endpoint [path] (str base-path path))
 
-(let [api-tags (set (json/parse-string (:body (http/get (endpoint "/tags.json")))))
-      existing-tags (set (map #(str/replace (fs/file-name %) #"\.edn" "") (fs/glob "src/pages/tags" "*.edn")))
-      missing-tags (set/difference api-tags existing-tags)
-      extraneous-tags (set/difference existing-tags api-tags)]
-  (prn :mt missing-tags)
-  (prn :et extraneous-tags))
+(defn tag-to-slug [tag] (str/replace tag " " "-"))
+(defn slug-to-tag [slug] (str/replace slug "-" " "))
+
+(defn get-api-tags []
+  (json/parse-string (:body (http/get (endpoint "/tags.json")))))
+
+(defn get-existing-tag-slugs []
+  (map #(str/replace (fs/file-name %) #"\.edn" "") (fs/glob "src/pages/tags" "*.edn")))
+
+(let [api-tag-slugs (set (map tag-to-slug (get-api-tags)))
+      existing-tag-slugs (set (get-existing-tag-slugs))
+      missing-tag-slugs (set/difference api-tag-slugs existing-tag-slugs)
+      extraneous-tag-slugs (set/difference existing-tag-slugs api-tag-slugs)]
+  (doseq [slug missing-tag-slugs]
+    (let [data {:template :tags :slug slug :tag (slug-to-tag slug) :intro []}]
+      (spit (str "src/pages/tags/" slug ".edn") (pr-str data))))
+
+  (doseq [slug extraneous-tag-slugs]
+    (println (str "git rm src/pages/tags/" slug ".edn"))))
