@@ -35,7 +35,7 @@
     #html [:<>
            [:link {:rel "stylesheet" :href "/css/my-nav.css"}]
            [:nav
-            [:ul [:li main] [:li manifesto] [:li wiki] [:li about] [:li [:a {:href "/contact"} "Contact"]]]]]))
+            [:ul [:li main] [:li manifesto] [:li wiki] [:li about] [:li [:a {:href "/contact" :taget "_blank"} "Contact"]]]]]))
 
 (defclass MyNav
   (extends HTMLElement)

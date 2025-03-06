@@ -2,9 +2,7 @@
 
 See the main README for general information. This README is here to document how to write web components with Cherry.
 
-/NOTE: I'm a software developer by trade, but I double in spirituality, energy healing and astrology. If you're a programmer like me, you are likely not to believe in this sort of stuff and that's fine. However I assure you, it's not a scam. It came to me without me asking for it and I take it as my privilidge and responsibility to use these insights for those who need them. Please keep an open mind./
-
-The site is deployed on [[https://jakubstastny.guru?utm_source=gh][jakubstastny.guru]].
+The site is deployed on [[https://spiritual-anarchy.network?utm_source=gh][spiritual-anarchy.network]].
 
 * Documentation
 ** Setup
