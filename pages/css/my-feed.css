@@ -1,0 +1,22 @@
+a { text-decoration: none; }
+
+.date { color: #666666; }
+
+.tags {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tags li {
+  font-style: italic;
+  color: #666666;
+  display: inline-block;
+}
+
+.tags li::before {
+  content: "#";
+}

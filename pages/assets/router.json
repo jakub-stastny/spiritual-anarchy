@@ -1,0 +1,25 @@
+{
+  "contact" : {
+    "path" : "/contact",
+    "title" : "Contact",
+    "heading" : "Contact me"
+  },
+  "index" : {
+    "path" : "/",
+    "title" : "Spiritual anarchy",
+    "heading" : "Main page"
+  },
+  "donate" : {
+    "path" : "/donate",
+    "title" : "Donate"
+  },
+  "about" : {
+    "path" : "/about",
+    "title" : "About Jakub",
+    "heading" : "About me"
+  },
+  "uncopyright" : {
+    "path" : "/uncopyright",
+    "title" : "Uncopyright"
+  }
+}
