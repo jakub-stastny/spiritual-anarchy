@@ -1,8 +1,13 @@
 {
   "contact" : {
     "path" : "/contact",
-    "title" : "Contact",
+    "title" : "Contact spiritual anarchy",
     "heading" : "Contact"
+  },
+  "wiki" : {
+    "path" : "/wiki",
+    "title" : "Spiritual anarchy wiki",
+    "heading" : "Wiki"
   },
   "index" : {
     "path" : "/",
