@@ -39,8 +39,7 @@ const manifesto3 = item_link.call(null, get_BANG_.call(null, router1, cherry_cor
 const about4 = item_link.call(null, get_BANG_.call(null, router1, cherry_core.keyword("about")));
 const wiki_hall_of_fame5 = item_link.call(null, get_BANG_.call(null, router1, cherry_core.keyword("wiki-hall-of-fame")));
 const wiki6 = cherry_core.vector(squint_html.tag`<span id="wiki">${item_link.call(null, get_BANG_.call(null, router1, cherry_core.keyword("wiki")), cherry_core.array_map(cherry_core.keyword("class"), "mobile"))}</span>`, squint_html.tag`<ul class="large-screen"><li>${wiki_hall_of_fame5}</li></ul>`);
-const contact7 = item_link.call(null, get_BANG_.call(null, router1, cherry_core.keyword("contact")));
-return squint_html.tag`<link rel="stylesheet" href="/css/my-nav.css"><nav><ul><li>${main2}</li><li>${manifesto3}</li><li>${wiki6}</li><li>${about4}</li><li>${contact7}</li></ul></nav>`;
+return squint_html.tag`<link rel="stylesheet" href="/css/my-nav.css"><nav><ul><li>${main2}</li><li>${manifesto3}</li><li>${wiki6}</li><li>${about4}</li><li><a href="/contact">Contact</a></li></ul></nav>`;
 });
 class MyNav extends HTMLElement {
   constructor() {
