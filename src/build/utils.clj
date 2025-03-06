@@ -75,7 +75,8 @@
       (throw error))))
 
 (defn generate-routes []
-  (let [paths (map str (fs/glob "src/pages" "*.edn"))]
+  (let [globs ["*.edn" "wiki/*.edn"]
+        paths (map str (mapcat #(fs/glob "src/pages" %) globs))]
     (reduce (fn [acc path]
               (let [data (read-page path)
                     route {(data :key) (dissoc data :key :content)}]

@@ -26,5 +26,10 @@
   "uncopyright" : {
     "path" : "/uncopyright",
     "title" : "Uncopyright"
+  },
+  "wiki-hall-of-fame" : {
+    "path" : "/wiki/hall-of-fame",
+    "title" : "Spiritual anarchy wiki: hall of fame",
+    "heading" : "Hall of fame"
   }
 }

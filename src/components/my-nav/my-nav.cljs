@@ -27,15 +27,10 @@
   (let [router (js/await (fetch-router))
         main (item-link (get! router :index))
         about (item-link (get! router :about))
-        wiki (item-link (get! router :wiki))
-        ;; spiritual-guidance (item-link (get! router :services-guidance))
-        ;; astro-reading (item-link (get! router :services-reading))
-        ;; remote-healing (item-link (get! router :services-healing))
-        ;; services [#html [:span {:id "services"} (item-link (get! router :services) {:class "mobile"})]
-        ;;           #html [:ul {:class "large-screen"}
-        ;;                  [:li spiritual-guidance]
-        ;;                  [:li remote-healing]
-        ;;                  [:li astro-reading]]]
+        wiki-hall-of-fame (item-link (get! router :wiki-hall-of-fame))
+        wiki [#html [:span {:id "wiki"} (item-link (get! router :wiki) {:class "mobile"})]
+                  #html [:ul {:class "large-screen"}
+                         [:li wiki-hall-of-fame]]]
         contact (item-link (get! router :contact))]
     #html [:<>
            [:link {:rel "stylesheet" :href "/css/my-nav.css"}]
