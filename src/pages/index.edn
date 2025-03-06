@@ -1,3 +1,6 @@
-{:key :index :path "/" :title "Spiritual anarchy" :heading "Main page" :content
- [[:section#feed [:my-feed {:path "/posts.json"}]]
+{:key :index :path "/" :title "Spiritual anarchy feed" :heading "Feed" :content
+ [[:section#feed
+   [:h1 "Latest spiritual stories"]
+   [:p "We link all the spiritual stories across the internet in order to show that you don't have to spend 7 lifetimes in a Buddhist monastery: on the contrary, the Divine is our truest nature, so how could we really be cut away from it?"]
+   [:my-feed {:path "/posts.json"}]]
   [:section#newsletter [:my-newsletter]]]}

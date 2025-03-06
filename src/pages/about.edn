@@ -1,4 +1,4 @@
 ;; TODO: A different picture of me or of something, maybe a drawing.
-{:key :about :path "/about" :title "About Jakub" :heading "About me" :content
+{:key :about :path "/about" :title "About spiritual anarchy" :heading "About" :content
  [[:h1 "About me"]
   [:p "If you feel we've got something to talk about, feel free to " [:a {:href :contact} "contact me"] "."]]}

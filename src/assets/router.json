@@ -2,12 +2,12 @@
   "contact" : {
     "path" : "/contact",
     "title" : "Contact",
-    "heading" : "Contact me"
+    "heading" : "Contact"
   },
   "index" : {
     "path" : "/",
-    "title" : "Spiritual anarchy",
-    "heading" : "Main page"
+    "title" : "Spiritual anarchy feed",
+    "heading" : "Feed"
   },
   "donate" : {
     "path" : "/donate",
@@ -15,8 +15,8 @@
   },
   "about" : {
     "path" : "/about",
-    "title" : "About Jakub",
-    "heading" : "About me"
+    "title" : "About spiritual anarchy",
+    "heading" : "About"
   },
   "uncopyright" : {
     "path" : "/uncopyright",
