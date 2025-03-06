@@ -1,4 +1,13 @@
-;; TODO: A different picture of me or of something, maybe a drawing.
 {:key :about :path "/about" :title "About spiritual anarchy" :heading "About" :content
- [[:h1 "About me"]
-  [:p "If you feel we've got something to talk about, feel free to " [:a {:href :contact} "contact me"] "."]]}
+ [[:h1 "About spiritual anarchy"]
+  [:p "I started this project out of frustration with how dogmatic people are. There's no need for a middle man, we are already Divine. It's time we change the narrative and debunk spirituality."]
+  [:p "Read the " [:a {:href :manifesto} "spiritual anarchy manifesto"] "."]
+
+  [:h2 "Who's behind the project?"]
+  [:p "I hope this will eventually become a community project, but for the time being it's just me, Jakub Šťastný."]
+  [:p "You can check my " [:a {:href :jakub-blog :target "_blank" :rel "noopener"} "personal site"] " if you want to learn more about me."]
+
+  [:section#uncopyright
+   [:h2 "Uncopyright"]
+   [:p.tagline "All the content on this site is free, even the source code that runs it!"]
+   [:p "If you want to use any content from this website, you are welcome to do so. I release copyrights on all of the content as well as on the source code of this website. Read " [:a {:href :uncopyright} "uncopyright"] " for more info."]]]}

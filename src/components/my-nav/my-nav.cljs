@@ -26,6 +26,7 @@
 (defn ^:async render []
   (let [router (js/await (fetch-router))
         main (item-link (get! router :index))
+        manifesto (item-link (get! router :manifesto))
         about (item-link (get! router :about))
         wiki-hall-of-fame (item-link (get! router :wiki-hall-of-fame))
         wiki [#html [:span {:id "wiki"} (item-link (get! router :wiki) {:class "mobile"})]
@@ -35,7 +36,7 @@
     #html [:<>
            [:link {:rel "stylesheet" :href "/css/my-nav.css"}]
            [:nav
-            [:ul [:li main] [:li wiki] [:li about] [:li contact]]]]))
+            [:ul [:li main] [:li manifesto] [:li wiki] [:li about] [:li contact]]]]))
 
 (defclass MyNav
   (extends HTMLElement)

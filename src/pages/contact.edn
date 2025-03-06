@@ -1,10 +1,7 @@
 {:key :contact :path "/contact" :title "Contact spiritual anarchy" :heading "Contact" :content
- [[:h1 "Contact me"]
-
+ [[:h1 "Contact us"]
   [:section
-   [:p "I’m here to listen and support you on your journey. Whether you have a question, need advice, or just want to talk, feel free to reach out."]
-   [:p "I’ve always been sensitive to the energies around me, and over time, I discovered my psychic abilities. This led me to dedicate myself to something greater—the pursuit of helping others on their spiritual journeys."]
-
+   [:p "klsdfjkl askjf kjsdfjkl skjlfjkl asklj fljksdf ljkasdlkjf jklsafjkl aslkjf ljkadslkjf ljksdlk fjlaksdfkl aslkjf jklasdklfj aksljdf jklaslkjf lkjadsfklj kjlsdf jklakljdf kljaslkj f"]
    [:p.tagline "Looking forward to connecting with you!"]
 
    [:div#contact-buttons.buttons
@@ -13,9 +10,4 @@
       [:a.button.blue
        [:fa-icon {:name "envelope" :colour "white"}] "Email me"]]]]]
 
-  [:section#newsletter [:my-newsletter]]
-
-  [:section#uncopyright
-   [:h2 "Uncopyright"]
-   [:p.tagline "All the content on this site is free, even the source code that runs it!"]
-   [:p "If you want to use any content from this website, you are welcome to do so. I release copyrights on all of the content as well as on the source code of this website. Read " [:a {:href :uncopyright} "uncopyright"] " for more info."]]]}
+  [:section#newsletter [:my-newsletter]]]}

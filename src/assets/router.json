@@ -4,6 +4,11 @@
     "title" : "Contact spiritual anarchy",
     "heading" : "Contact"
   },
+  "manifesto" : {
+    "path" : "/manifesto",
+    "title" : "Spiritual anarchy manifesto",
+    "heading" : "Manifesto"
+  },
   "wiki" : {
     "path" : "/wiki",
     "title" : "Spiritual anarchy wiki",
