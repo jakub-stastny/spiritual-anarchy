@@ -31,12 +31,11 @@
         wiki-hall-of-fame (item-link (get! router :wiki-hall-of-fame))
         wiki [#html [:span {:id "wiki"} (item-link (get! router :wiki) {:class "mobile"})]
                   #html [:ul {:class "large-screen"}
-                         [:li wiki-hall-of-fame]]]
-        contact (item-link (get! router :contact))]
+                         [:li wiki-hall-of-fame]]]]
     #html [:<>
            [:link {:rel "stylesheet" :href "/css/my-nav.css"}]
            [:nav
-            [:ul [:li main] [:li manifesto] [:li wiki] [:li about] [:li contact]]]]))
+            [:ul [:li main] [:li manifesto] [:li wiki] [:li about] [:li [:a {:href "/contact"} "Contact"]]]]]))
 
 (defclass MyNav
   (extends HTMLElement)
