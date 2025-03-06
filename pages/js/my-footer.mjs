@@ -1,7 +1,6 @@
 import * as cherry_core from 'cherry-cljs/cljs.core.js';
 import * as squint_html from 'squint-cljs/src/squint/html.js';
 import { css_var } from 'helpers';
-import { youtube_link, reddit_link } from 'config';
 import("/js/fa-icon.mjs");
 import("/js/my-email.mjs");
 var social_icon = (function (name, link) {
@@ -11,7 +10,7 @@ var render_footer = (function () {
 return squint_html.tag`<ul class="footer-icons"><li>${social_icon.call(null, "youtube", youtube_link)}</li><li><my-email subject="Hey there!"><a><fa-icon name="envelope" colour="${squint_html.attr(css_var.call(null, "envelope-colour"))}"></fa-icon></a></my-email></li><li>${social_icon.call(null, "reddit", reddit_link)}</li></ul>`;
 });
 var render = (function (_) {
-return squint_html.tag`<link rel="stylesheet" href="/css/my-footer.css"><footer>${render_footer.call(null)}</footer>`;
+return squint_html.html`<link rel="stylesheet" href="/css/my-footer.css"><footer>&nbsp;</footer>`;
 });
 class MyFooter extends HTMLElement {
   constructor() {

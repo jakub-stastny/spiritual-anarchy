@@ -1,25 +1,31 @@
 {
-  "contact" : {
-    "path" : "/contact",
-    "title" : "Contact",
-    "heading" : "Contact me"
+  "manifesto" : {
+    "path" : "/manifesto",
+    "title" : "Spiritual anarchy manifesto",
+    "heading" : "Manifesto"
+  },
+  "wiki" : {
+    "path" : "/wiki",
+    "title" : "Spiritual anarchy wiki",
+    "heading" : "Wiki"
   },
   "index" : {
     "path" : "/",
-    "title" : "Spiritual anarchy",
-    "heading" : "Main page"
-  },
-  "donate" : {
-    "path" : "/donate",
-    "title" : "Donate"
+    "title" : "Spiritual anarchy feed",
+    "heading" : "Feed"
   },
   "about" : {
     "path" : "/about",
-    "title" : "About Jakub",
-    "heading" : "About me"
+    "title" : "About spiritual anarchy",
+    "heading" : "About"
   },
   "uncopyright" : {
     "path" : "/uncopyright",
     "title" : "Uncopyright"
+  },
+  "wiki-hall-of-fame" : {
+    "path" : "/wiki/hall-of-fame",
+    "title" : "Spiritual anarchy wiki: hall of fame",
+    "heading" : "Hall of fame"
   }
 }

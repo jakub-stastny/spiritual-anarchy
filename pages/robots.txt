@@ -1,7 +1,8 @@
 User-agent: *
 Disallow: /
-Allow: /contact$
+Allow: /manifesto$
+Allow: /wiki$
 Allow: /$
-Allow: /donate$
 Allow: /about$
 Allow: /uncopyright$
+Allow: /wiki/hall-of-fame$

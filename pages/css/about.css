@@ -1,0 +1,19 @@
+/* Links */
+#uncopyright a, #uncopyright a:visited {
+  color: cornflowerblue;
+}
+
+#uncopyright a:hover {
+  color: mediumaquamarine;
+}
+
+#uncopyright a:active {
+  color: red; /* Define again, a:active is low-specificity and
+                 #uncopyright a:hover is overriding it. */
+  background: yellow;
+}
+
+/* Other */
+#uncopyright, #uncopyright p {
+  color: lightslategrey;
+}
