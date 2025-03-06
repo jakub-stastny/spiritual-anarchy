@@ -15,6 +15,6 @@
          [:header
           [:div {:class "wrapper" :style "opacity: 0;"}]
           [:h1 (no-self-referring-link "Spiritual anarchy" "/")]
-          [:h2 {:class "tagline"} "Tagline"]]])
+          [:h2 {:class "tagline"} "The guru is within. Learn to trust it."]]])
 
 (component MyHeader "my-header" render)

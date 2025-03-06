@@ -1,4 +1,2 @@
-(def email-chunks ["jakub.stastny.pt" "+" "web" "@" "gmail.com"])
-(def youtube-link "https://www.youtube.com/@jakub-stastny")
-(def reddit-link "https://www.reddit.com/user/jakubstastny")
-(def custom-domain "https://jakubstastny.guru")
+(def email-chunks ["jakub.stastny.pt" "+" "spiritual-anarchy" "@" "gmail.com"])
+(def custom-domain "https://spiritual-anarchy.network")

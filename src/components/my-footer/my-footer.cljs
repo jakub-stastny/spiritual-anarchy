@@ -7,7 +7,8 @@
 
 (ns my-footer
   (:require [helpers :refer [css-var]]
-            [config :refer [youtube-link reddit-link]])
+            ;; [config :refer [youtube-link reddit-link]]
+            )
   (:require-macros [macros :refer [component]]))
 
 ;; Dependencies
@@ -35,6 +36,9 @@
 (defn render [_]
   #html [:<>
          [:link {:rel "stylesheet" :href "/css/my-footer.css"}]
-         [:footer (render-footer)]])
+         [:footer
+          "&nbsp;"
+          ;; (render-footer)
+          ]])
 
 (component MyFooter "my-footer" render)

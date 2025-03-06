@@ -1,4 +1,0 @@
-;; TODO: foto de la casita.
-{:key :donate :path "/donate" :title "Donate" :content
- [[:h1 "Donate"]
-  [:p {:style "font-style: italic"} "I'm working on this page (as of September 2024), it'll be up hopefully soon."]]}

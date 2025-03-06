@@ -14,10 +14,6 @@
     "title" : "Spiritual anarchy feed",
     "heading" : "Feed"
   },
-  "donate" : {
-    "path" : "/donate",
-    "title" : "Donate"
-  },
   "about" : {
     "path" : "/about",
     "title" : "About spiritual anarchy",
