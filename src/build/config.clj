@@ -16,3 +16,6 @@
   ["solid/envelope.svg" "solid/spinner.svg"
    "brands/youtube.svg" "brands/reddit.svg" "brands/github.svg"
    "brands/github-alt.svg" "brands/square-github.svg"])
+
+(def redirects
+  {"/contact" "https://jakubstastny.me/contact"})

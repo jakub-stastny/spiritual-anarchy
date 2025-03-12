@@ -1,6 +1,9 @@
 (ns build-router
   (:require [clojure.string :as str]
+            [config :as config]
             [utils :as utils]))
+
+(defn- rule [[a b]] (str/join " " [a b 301]))
 
 ;; TODO: Move from src/assets to src/data.
 (defn -main []
@@ -8,6 +11,4 @@
     (utils/ensure-parent-dir path)
     (spit path (utils/pretty-print-json (utils/generate-routes))))
 
-  ;; TODO: The redirects should come from config.
-  (let [redirects "/contact  https://jakubstastny.me/contact  301"]
-    (spit "pages/_redirects" redirects)))
+  (spit "pages/_redirects" (str/join "\n" (map rule config/redirects))))
