@@ -27,5 +27,10 @@
     "path" : "/wiki/hall-of-fame",
     "title" : "Spiritual anarchy wiki: hall of fame",
     "heading" : "Hall of fame"
+  },
+  "wiki-diy" : {
+    "path" : "/wiki/diy",
+    "title" : "Spiritual anarchy wiki: DIY",
+    "heading" : "DIY"
   }
 }

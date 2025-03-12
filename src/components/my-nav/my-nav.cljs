@@ -29,9 +29,11 @@
         manifesto (item-link (get! router :manifesto))
         about (item-link (get! router :about))
         wiki-hall-of-fame (item-link (get! router :wiki-hall-of-fame))
+        wiki-diy (item-link (get! router :wiki-diy))
         wiki [#html [:span {:id "wiki"} (item-link (get! router :wiki) {:class "mobile"})]
                   #html [:ul {:class "large-screen"}
-                         [:li wiki-hall-of-fame]]]]
+                         [:li wiki-hall-of-fame]
+                         [:li wiki-diy]]]]
     #html [:<>
            [:link {:rel "stylesheet" :href "/css/my-nav.css"}]
            [:nav
